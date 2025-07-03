@@ -3,7 +3,6 @@
 "use client";
 
 import React from "react"; // Removed useState
-import Image from "next/image"; // Keep Image for CircularText section
 
 // Import your components and blocks
 // Removed GooeyNav import
