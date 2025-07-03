@@ -34,7 +34,7 @@ export const projects = [
     title: " Jahitra: Company Profile Website",
     category: "Web Development",
     description: "Front-End Web Developer",
-    imageSrc: "/proj/projectOne.png",
+    imageSrc: "/proj/jahitra.png",
     link: "https://jahitra.vercel.app/",
   },
   {
@@ -43,7 +43,7 @@ export const projects = [
     title: "PakarISPA.ID: Mobile Expert System for Respiratory Diagnosis",
     description: "Mobile App Developer",
     category: "Mobile App",
-    imageSrc: "/proj/projectTwo.png",
+    imageSrc: "/proj/pakarispa.png",
     link: "https://github.com/Zaynorang/SistemPakarISPA.git",
   },
   {

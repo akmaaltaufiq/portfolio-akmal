@@ -75,7 +75,7 @@ const projects = [
       "/techstack/css.svg",
       "/techstack/javascript.svg",
     ],
-    imageSrc: "/proj/projectOne.png",
+    imageSrc: "/proj/jahitra.png",
     link: "https://jahitra.vercel.app/",
   },
 
@@ -85,7 +85,7 @@ const projects = [
     title: "PakarISPA.ID: Mobile Expert System for Respiratory Diagnosis",
     description: "Mobile App Developer",
     techstack: ["/techstack/java.svg", "/techstack/android_studio.svg"],
-    imageSrc: "/proj/projectTwo.png",
+    imageSrc: "/proj/pakarispa.png",
     link: "https://github.com/Zaynorang/SistemPakarISPA.git",
   },
   {
