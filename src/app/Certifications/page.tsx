@@ -19,8 +19,6 @@ const certificationsData = [
     description:
       "Learn and practice over 300 hours of HTML, CSS, Flexbox, Grid, and responsive design principles. Build real-world projects like landing pages, survey forms, and technical documentation. ",
     imageSrc: "/certifications/web.png",
-    projectLink:
-      "https://procrash-hdps5h.flutterflow.app/?fbclid=IwZXh0bgNhZW0CMTEAAR6V1DkZeKy8dZetXVGOk7A33bbXy5Ue001oiPqO8CxLwXM40uhn5cdDCW9RUQ_aem_cvDKSgLmGXTzEsuIRtzhrw",
     trophyType: "participant",
   },
   {
@@ -30,7 +28,6 @@ const certificationsData = [
     description:
       "Explore modern front-end libraries like React.js, Redux, Bootstrap, and jQuery. Create component-based Single Page Applications (SPAs) and state management.",
     imageSrc: "/certifications/FrontEnd.png",
-    projectLink: "https://github.com/Feinpoint/eCarga",
     trophyType: "participant",
   },
   {
@@ -40,7 +37,6 @@ const certificationsData = [
     description:
       "Official international certification from Certiport on the basics of data analytics, including spreadsheet data processing, basic visualization, and interpretation of analysis results.",
     imageSrc: "/certifications/data_analytics.jpg",
-    projectLink: "https://talento-xi.vercel.app/",
     trophyType: "special",
   },
   {
@@ -50,8 +46,6 @@ const certificationsData = [
     description:
       "Achieved 2nd place in the Top Achievers Promotion Partner 2024 award, demonstrating strong performance executed personalized online marketing strategies in a short time frame.",
     imageSrc: "/certifications/promotion.jpg",
-    projectLink:
-      "https://procrash-hdps5h.flutterflow.app/?fbclid=IwZXh0bgNhZW0CMTEAAR6V1DkZeKy8dZetXVGOk7A33bbXy5Ue001oiPqO8CxLwXM40uhn5cdDCW9RUQ_aem_cvDKSgLmGXTzEsuIRtzhrw",
     trophyType: "second",
   },
   {
@@ -61,8 +55,6 @@ const certificationsData = [
     description:
       "Learned how to enhance user experience using motion-based storytelling and copywriting strategies for web interfaces.",
     imageSrc: "/certifications/workshop.jpg",
-    projectLink:
-      "https://procrash-hdps5h.flutterflow.app/?fbclid=IwZXh0bgNhZW0CMTEAAR6V1DkZeKy8dZetXVGOk7A33bbXy5Ue001oiPqO8CxLwXM40uhn5cdDCW9RUQ_aem_cvDKSgLmGXTzEsuIRtzhrw",
     trophyType: "participant",
   },
   {
@@ -72,7 +64,6 @@ const certificationsData = [
     description:
       "Advanced soft skills training covering professional communication, team collaboration, decision-making, and critical thinking for 21st century job readiness.",
     imageSrc: "/certifications/employability.jpg",
-    projectLink: "https://neosolve-hackit-kachingko.vercel.app/",
     trophyType: "special",
   },
   {
@@ -81,8 +72,7 @@ const certificationsData = [
     award: "Cisco via Credly — April 2025",
     description:
       "Understand the basic concepts of IoT, hardware & software architecture, and IoT applications in various industry sectors.",
-    imageSrc: "/certifications/iot-badge.png",
-    projectLink: "https://neosolutions-tenext-ai.vercel.app/",
+    imageSrc: "/certifications/iot.jpg",
     trophyType: "participant",
   },
 ];
@@ -170,7 +160,6 @@ export default function Certifications() {
                 award={entry.award}
                 description={entry.description}
                 imageSrc={entry.imageSrc}
-                projectLink={entry.projectLink}
                 trophyType={entry.trophyType}
               />
             ))}
