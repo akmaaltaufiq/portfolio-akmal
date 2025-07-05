@@ -68,7 +68,7 @@ const certificationsData = [
   },
   {
     entryNumber: "07",
-    title: "Introduction to the Internet of Things (Badge)",
+    title: "Introduction to the Internet of Things",
     award: "Cisco via Credly — April 2025",
     description:
       "Understand the basic concepts of IoT, hardware & software architecture, and IoT applications in various industry sectors.",
