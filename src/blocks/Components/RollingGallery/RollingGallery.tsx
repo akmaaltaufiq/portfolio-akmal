@@ -16,9 +16,9 @@ const IMGS: string[] = [
   "/certifications/FrontEnd.png",
   "/certifications/web.png",
   "/certifications/data_analytics.jpg",
-  "/certifications/promotion.jpg",
+  "/certifications/iot.jpg",
   "/certifications/employability.jpg",
-  "/certifications/workshop.jpg",
+  "/certifications/promotion.jpg",
 ];
 
 interface RollingGalleryProps {
