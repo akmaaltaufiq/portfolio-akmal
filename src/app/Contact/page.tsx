@@ -14,17 +14,17 @@ const socialLinks = [
     platform: "GitHub",
     href: "https://github.com/akmaaltaufiq",
     iconPath: "/icons/github_icon.svg",
-  }, // <-- Replace YOUR_GITHUB_LINK and icon path
+  },
   {
     platform: "LinkedIn",
     href: "https://www.linkedin.com/in/akmal-taufiqurrahman-686961285/",
     iconPath: "/icons/linkedin_icon.svg",
-  }, // <-- Replace YOUR_LINKEDIN_LINK and icon path
+  },
   {
     platform: "Gmail",
     href: "mailto:taufikakmal53@gmail.com",
     iconPath: "/icons/gmail_icon.svg",
-  }, // <-- Replace YOUR_EMAIL_ADDRESS and icon path
+  },
 ];
 
 // Define contact information
