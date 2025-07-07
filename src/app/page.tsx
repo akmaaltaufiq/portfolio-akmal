@@ -131,7 +131,7 @@ const contentSkills = [
   "Adobe Premiere Pro",
   "Adobe Photoshop",
   "OBS Studio",
-  "Microsoft Excel",
+  "Microsoft Office",
 ];
 
 export default function Home() {
@@ -239,10 +239,10 @@ export default function Home() {
               </h3>
               <p className="text-gray-400 md:text-md text-sm mt-2 leading-relaxed mb-5">
                 I’m a 4th-semester Informatics student at UPN Veteran Jakarta
-                (GPA 3.93) passionate about fullstack web development. I’ve
+                (GPA 3.89) passionate about fullstack web development. I’ve
                 built responsive web applications using HTML, CSS, JavaScript,
                 Tailwind CSS, and React, and I’m currently deepening my backend
-                skills with Node.js, Express, and MySQL. I also have experience
+                skills with Node.js, Express, and SQL. I also have experience
                 developing Android apps in Java and building Python-based
                 systems. I actively grow through real-world projects, freelance
                 work, and team-based collaboration.

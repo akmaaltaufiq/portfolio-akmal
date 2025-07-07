@@ -16,7 +16,7 @@ interface AwardsAndCertificationsProps {
 
 const trophyImagePaths: Record<string, string> = {
   first: "/trophies/gold_trophy.png",
-  second: "/trophies/silver_trophy.png",
+  second: "/trophies/silver_tropy.png",
   third: "/trophies/bronze_trophy.png",
   special: "/trophies/special_trophy.png",
   participant: "/trophies/participant_trophy.png",
