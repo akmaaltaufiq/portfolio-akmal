@@ -238,7 +238,7 @@ export default function Home() {
                 DEVELOPER
               </h3>
               <p className="text-gray-400 md:text-md text-sm mt-2 leading-relaxed mb-5">
-                I’m a 4th-semester Informatics student at UPN Veteran Jakarta
+                I’m a 5th-semester Informatics student at UPN Veteran Jakarta
                 (GPA 3.89) passionate about fullstack web development. I’ve
                 built responsive web applications using HTML, CSS, JavaScript,
                 Tailwind CSS, and React, and I’m currently deepening my backend
