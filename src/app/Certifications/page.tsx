@@ -41,21 +41,21 @@ const certificationsData = [
   },
   {
     entryNumber: "04",
+    title: "Introduction to the Internet of Things",
+    award: "Cisco via Credly — April 2025",
+    description:
+      "Understand the basic concepts of IoT, hardware & software architecture, and IoT applications in various industry sectors.",
+    imageSrc: "/certifications/iot.jpg",
+    trophyType: "participant",
+  },
+  {
+    entryNumber: "05",
     title: "Promotion Partner",
     award: "2nd Place - TYMY, December 2024",
     description:
       "Achieved 2nd place in the Top Achievers Promotion Partner 2024 award, demonstrating strong performance executed personalized online marketing strategies in a short time frame.",
     imageSrc: "/certifications/promotion.jpg",
     trophyType: "second",
-  },
-  {
-    entryNumber: "05",
-    title: "Workshop SQL",
-    award: "BEM-FIK - September 2023",
-    description:
-      "Learned how to enhance user experience using motion-based storytelling and copywriting strategies for web interfaces.",
-    imageSrc: "/certifications/workshop.jpg",
-    trophyType: "participant",
   },
   {
     entryNumber: "06",
@@ -68,11 +68,11 @@ const certificationsData = [
   },
   {
     entryNumber: "07",
-    title: "Introduction to the Internet of Things",
-    award: "Cisco via Credly — April 2025",
+    title: "Workshop SQL",
+    award: "BEM-FIK - September 2023",
     description:
-      "Understand the basic concepts of IoT, hardware & software architecture, and IoT applications in various industry sectors.",
-    imageSrc: "/certifications/iot.jpg",
+      "Learned how to enhance user experience using motion-based storytelling and copywriting strategies for web interfaces.",
+    imageSrc: "/certifications/workshop.jpg",
     trophyType: "participant",
   },
 ];
