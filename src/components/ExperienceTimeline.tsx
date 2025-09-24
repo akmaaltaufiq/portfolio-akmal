@@ -12,7 +12,7 @@ const experiences = [
     year: "2025",
     description:
       "Developing and maintaining internal web applications, gaining hands-on fullstack experience in a government-scale digital environment.",
-    logos: ["/exp_logos/logo_kemendag.svg"],
+    logos: ["/exp_logos/logo-kemendag.png"],
   },
   {
     id: 2,
