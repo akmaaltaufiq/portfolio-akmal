@@ -8,7 +8,7 @@
   Set the dark mode colors as the default in :root.
 */
 :root {
-  --background: #0f172a; /* Blue Dark background color */
+  --background: #000000; /* Blue Dark background color */
   --foreground: #ededed; /* Light foreground color */
 }
 
@@ -86,7 +86,7 @@
 
 /* Keep your existing body styles and add position relative */
 body {
-  /* These will now use the dark colors defined in :root */
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-gilroy), Arial, Helvetica, sans-serif;

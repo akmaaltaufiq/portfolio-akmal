@@ -1,183 +1,24 @@
-// app/page.tsx (or wherever your page file is)
-
 "use client";
 
-import React from "react"; // Removed useState
-
-// Import your components and blocks
-// Removed GooeyNav import
+import React, { useState } from "react";
 import BlurText from "@/blocks/TextAnimations/BlurText/BlurText";
-import TrueFocus from "@/blocks/TextAnimations/TrueFocus/TrueFocus";
-import Threads from "@/blocks/Backgrounds/Threads/Threads";
-import CircularText from "@/blocks/TextAnimations/CircularText/CircularText";
-// ScrollReveal is imported but not used in the provided code snippet, keep if used elsewhere
-// import ScrollReveal from "@/blocks/TextAnimations/ScrollReveal/ScrollReveal";
 import TiltedCard from "@/blocks/Components/TiltedCard/TiltedCard";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
-import SkillTag from "@/components/SkillTag"; // Assuming SkillTag is in components folder
-import ProjectCard from "@/components/ProjectCard"; // Import the new ProjectCard component
-
-// data/projects.ts
-// Define your projects array (add your actual project data here)
-const projects = [
-  {
-    id: 1,
-    number: "01",
-    title: "SecureNote: Web App for Hybrid Encrypted Messaging",
-    description: "Full Stack Developer",
-    techstack: [
-      "/techstack/python.svg",
-      "/techstack/react.svg",
-      "/techstack/tailwind.svg",
-      "/techstack/flask-logo.svg",
-      "/techstack/rest-api.svg",
-    ],
-    imageSrc: "/proj/securenote.png",
-    link: "https://github.com/akmaaltaufiq/securenote-web",
-  },
-  {
-    id: 2,
-    number: "02",
-    title: "MSAI Bakeshop: Brand Website with Bilingual Support",
-    description: "Web Developer",
-    techstack: [
-      "/techstack/html.svg",
-      "/techstack/css.svg",
-      "/techstack/javascript.svg",
-      "/techstack/tailwind.svg",
-    ],
-    imageSrc: "/proj/MSAI.png",
-    link: "https://msai-bakeshop.vercel.app/",
-  },
-  {
-    id: 3,
-    number: "03",
-    title: "PhishDetect Web: Email Phishing Detection System",
-    description: "Full Stack Developer",
-    techstack: [
-      "/techstack/html.svg",
-      "/techstack/css.svg",
-      "/techstack/javascript.svg",
-      "/techstack/python.svg",
-      "/techstack/flask-logo.svg",
-    ],
-    imageSrc: "/proj/Phishdetectweb.png",
-    link: "https://phishdetect-web-production.up.railway.app/",
-  },
-  {
-    id: 4,
-    number: "04",
-    title: " Jahitra: Company Profile Website",
-    description: "Web Developer",
-    techstack: [
-      // <-- Add paths to tech stack icons for Procrash
-      "/techstack/html.svg",
-      "/techstack/css.svg",
-      "/techstack/javascript.svg",
-    ],
-    imageSrc: "/proj/jahitra.png",
-    link: "https://jahitra.vercel.app/",
-  },
-
-  {
-    id: 5,
-    number: "05",
-    title: "PakarISPA.ID: Mobile Expert System for Respiratory Diagnosis",
-    description: "Mobile App Developer",
-    techstack: ["/techstack/java.svg", "/techstack/android_studio.svg"],
-    imageSrc: "/proj/pakarispa.png",
-    link: "https://github.com/Zaynorang/SistemPakarISPA.git",
-  },
-  {
-    id: 6,
-    number: "06",
-    title: "IoT-based Temperature, Humidity & Motion Monitoring System",
-    description: "IoT Developer",
-    techstack: [
-      "/techstack/python.svg",
-      "/techstack/postgresql-logo.svg",
-      "/techstack/timescaledb.svg",
-      "/techstack/c++.svg",
-    ],
-    imageSrc: "/proj/iot-proj.png",
-    link: "https://github.com/Zaynorang/iot-sensor-monitoring",
-  },
-];
-
-// Removed items constant
-
-const handleAnimationComplete = () => {
-  console.log("Animation completed!");
-};
-
-// Define your skill arrays (you could also move these to a data file if they get long)
-const devSkills = [
-  "HTML",
-  "CSS",
-  "Javascript",
-  "Tailwind",
-  "React",
-  "SQL",
-  "Next.js",
-  "Node.js",
-  "Python",
-  "Java",
-];
-
-const contentSkills = [
-  "Figma",
-  "Canva",
-  "Capcut",
-  "Adobe Premiere Pro",
-  "Adobe Photoshop",
-  "OBS Studio",
-  "Microsoft Office",
-];
+import ProjectsSection from "@/components/ProjectCard";
+import TechStackMarquee from "@/components/TechStackMarquee";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
-  // Removed mobileMenuOpen state
+  const [showRole, setShowRole] = useState(false);
+
+  const handleAnimationComplete = () => {
+    setShowRole(true);
+  };
+
   return (
-    // The cursor: 'none' style is now applied globally in layout.tsx
-    // Removed outer div as layout.tsx now handles the main structure
-    // <div className="flex flex-col min-h-screen bg-[#101112] font-gilroy"> // Removed this line
     <>
-      {" "}
-      {/* Added React Fragment wrapper */}
-      {/* Main content area */}
-      <main className="flex-grow flex flex-col items-center h-full relative pt-20">
-        {" "}
-        {/* Added padding top to account for fixed header */}
-        <div
-          style={{
-            width: "100%",
-            height: "600px",
-            position: "absolute",
-            bottom: "50",
-          }}
-          className="hidden md:block"
-        >
-          <Threads
-            amplitude={2.5}
-            distance={0}
-            enableMouseInteraction={false}
-          />
-        </div>
-        <div
-          style={{
-            width: "100%",
-            height: "600px",
-            position: "absolute",
-            bottom: "50",
-          }}
-          className="md:hidden opacity-10"
-        >
-          <Threads
-            amplitude={2.5}
-            distance={0}
-            enableMouseInteraction={false}
-          />
-        </div>
-        {/* ... other main content elements ... */}
+      <main className="flex-grow flex flex-col items-center h-full relative pt-20 overflow-x-hidden">
         <div className="w-full flex justify-center items-center my-4 md:mt-15 text-center font-bold relative px-4 md:px-0">
           <BlurText
             text="Akmal Taufiqurrahman"
@@ -185,174 +26,191 @@ export default function Home() {
             animateBy="letters"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="lg:text-7xl md:text-5xl text-2xl text-center"
+            className="lg:text-7xl md:text-6xl sm:text-4xl text-3xl text-center"
           />
         </div>
-        <div className="font-bold text-center opacity-0 animate-fadeIn mt-1 md:mt-3">
-          <TrueFocus
-            sentence="Developer   Creator"
-            manualMode={true}
-            blurAmount={5}
-            borderColor="cyan"
-            animationDuration={0.3}
-            pauseBetweenAnimations={1}
-          />
-        </div>
-        {/* style jsx block is fine */}
+        {showRole && (
+          <div className="font-bold text-center mt-1 md:mt-3 px-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-neon-once">
+              Full-Stack Developer
+            </h2>
+          </div>
+        )}
         <style jsx>{`
-          @keyframes fadeIn {
-            from {
+          @keyframes textAppear {
+            0% {
               opacity: 0;
-              transform: translateY(10px);
+              transform: scale(0.95);
             }
-            to {
+            100% {
               opacity: 1;
-              transform: translateY(0);
+              transform: scale(1);
             }
           }
-
-          .animate-fadeIn {
-            animation: fadeIn 1s ease-out forwards;
-            animation-delay: 0.8s;
+          @keyframes neonSlideOnce {
+            0% {
+              background-position: 100% 0;
+              filter: drop-shadow(0 0 0 rgba(56, 189, 248, 0))
+                drop-shadow(0 0 0 rgba(168, 85, 247, 0));
+            }
+            50% {
+              background-position: 50% 0;
+              filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6))
+                drop-shadow(0 0 25px rgba(168, 85, 247, 0.5));
+            }
+            100% {
+              background-position: 0% 0;
+              filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.8))
+                drop-shadow(0 0 35px rgba(168, 85, 247, 0.7));
+            }
+          }
+          @keyframes glowPulse {
+            0%,
+            100% {
+              filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6))
+                drop-shadow(0 0 25px rgba(168, 85, 247, 0.5));
+            }
+            50% {
+              filter: drop-shadow(0 0 25px rgba(56, 189, 248, 0.8))
+                drop-shadow(0 0 40px rgba(236, 72, 153, 0.7));
+            }
+          }
+          .animate-neon-once {
+            background-size: 200% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: textAppear 0.8s ease-out forwards,
+              neonSlideOnce 2.5s ease-out 0.8s forwards,
+              glowPulse 3s ease-in-out 3.3s infinite;
           }
         `}</style>
-        <div className="w-full items-center mt-8 mb-4 relative h-[300px] hidden md:block">
-          <CircularText
-            text="SCROLL-DOWN*SCROLL-DOWN*"
-            onHover="slowDown"
-            spinDuration={5}
-            className="absolute left-45 bottom-10"
+
+        {/* Spacer dari hero ke About Me */}
+        <div className="h-32 sm:h-40 md:h-52 lg:h-64"></div>
+
+        {/* About Me Section */}
+        <div
+          id="about"
+          className="flex-grow flex flex-col lg:flex-row items-stretch justify-between w-full max-w-7xl mx-auto mt-16 md:mt-24 px-4 sm:px-6 md:px-8 lg:px-12 gap-8 md:gap-12 relative"
+        >
+          {/* === Title About Me di tengah === */}
+          <BlurText
+            text="About Me"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="absolute -top-8 sm:-top-10 md:-top-12 left-1/2 -translate-x-1/2 text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-center"
           />
-          <p className="text-white font-bold text-xl tracking-wide absolute left-44 bottom-9 m-10 transition-all duration-300 hover:scale-150 hover:rotate-6 hover:brightness-125">
-            at
-          </p>
-        </div>
-        <div className="flex-grow flex flex-col md:flex-row items-center justify-center w-full md:w-9xl md:mt-35 mt-10 md:space-x-50 space-x-0">
-          {/* Tech Stack Section Start */}
-          <div className="flex flex-col w-full max-w-lg px-4 md:px-0 mt-10 mb-20 space-y-8">
-            {/* DEVELOP Card */}
-            {/* custom-corner-border class is kept from previous step */}
-            {/* hover:scale-105 on the card wrapper is kept */}
-            <div className="relative p-6 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 custom-corner-border">
-              <h3 className="text-white font-bold md:text-2xl text-lg tracking-wide mb-3">
+
+          {/* === Mobile: Photo First === */}
+          <div className="md:hidden flex flex-col w-full justify-center items-center relative pt-20 mb-8">
+            {/* Mobile Photo */}
+            <div className="relative mb-8">
+              <TiltedCard
+                imageSrc="/photos/tiltedcard.svg"
+                altText="akmaaltaufiq"
+                captionText="Akmal Taufiqurrahman"
+                containerHeight="280px"
+                containerWidth="220px"
+                imageHeight="280px"
+                imageWidth="220px"
+                rotateAmplitude={10}
+                scaleOnHover={1.1}
+                showMobileWarning={false}
+                showTooltip={false}
+                displayOverlayContent={false}
+              />
+            </div>
+          </div>
+
+          {/* === Left : Developer + TechStack === */}
+          <div className="flex flex-col w-full lg:w-7/12 items-center lg:items-start space-y-8 md:space-y-10 lg:space-y-12 pt-0 md:pt-24">
+            <div className="relative p-4 sm:p-6 w-full rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 custom-corner-border">
+              <h3 className="text-white font-bold text-lg sm:text-xl md:text-2xl tracking-wide mb-3 text-center lg:text-left">
                 DEVELOPER
               </h3>
-              <p className="text-gray-400 md:text-md text-sm mt-2 leading-relaxed mb-5">
-                I’m a 5th-semester Informatics student at UPN Veteran Jakarta
-                (GPA 3.90) passionate about fullstack web development. I’ve
+              <p className="text-gray-400 text-sm sm:text-base md:text-md mt-2 leading-relaxed text-center lg:text-left">
+                I'm a 5th-semester Informatics student at UPN Veteran Jakarta
+                (GPA 3.90) passionate about fullstack web development. I've
                 built responsive web applications using HTML, CSS, JavaScript,
-                Tailwind CSS, React.js and Next.js, and I’m currently deepening
+                Tailwind CSS, React.js and Next.js, and I'm currently deepening
                 my backend skills with Node.js, Express, and SQL. I also have
                 experience developing Android apps in Java and building
                 Python-based systems. I actively grow through real-world
                 projects, freelance work, and team-based collaboration.
               </p>
-              <h4 className="text-cyan-300 font-semibold mb-3 text-base">
-                Skillset &amp; tools
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {devSkills.map((skill) => (
-                  <SkillTag key={skill} skillName={skill} />
-                ))}
-              </div>
             </div>
 
-            {/* CONTENTS Card */}
-            {/* custom-corner-border class is kept from previous step */}
-            {/* hover:scale-105 on the card wrapper is kept */}
-            <div className="relative p-6 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 custom-corner-border">
-              <h3 className="text-white font-bold md:text-2xl text:lg tracking-wide mb-3">
-                CREATOR {/* Updated title based on your code */}
-              </h3>
-              <p className="text-gray-400 md:text-md text-sm mt-2 leading-relaxed mb-5">
-                My journey in content creation has sparked a deep passion for
-                building digital solutions that are both functional and
-                impactful. Actively involved in student organizations, I’ve
-                developed leadership, collaboration, and communication skills.
-                Beyond academics, I’ve worked as a freelance digital marketer
-                and content creator, sharpening my adaptability, time
-                management, and self-initiative through real-world experiences.
-              </p>
-              <h4 className="text-cyan-300 font-semibold mb-3 text-base">
-                Skillset &amp; Tools
+            <div className="relative p-4 sm:p-6 w-full rounded-lg custom-corner-border transition-transform duration-300 ease-in-out hover:scale-105">
+              <h4 className="text-white font-bold text-lg sm:text-xl md:text-2xl tracking-wide mb-4 text-center lg:text-left">
+                Tech Stack
               </h4>
-              <div className="flex flex-wrap gap-2">
-                {contentSkills.map((skill) => (
-                  <SkillTag key={skill} skillName={skill} />
-                ))}
-              </div>
+              <TechStackMarquee />
             </div>
           </div>
-          {/* Tech Stack Section End */}
 
-          {/* About Me Section */}
-          <div className="flex flex-col">
-            <BlurText
-              text="About Me"
-              delay={150}
-              animateBy="words"
-              direction="top"
-              onAnimationComplete={handleAnimationComplete}
-              className="md:text-7xl text-3xl font-extrabold"
-            />
-
-            <div className="hidden md:block mt-10 mb-20">
+          {/* === Right : Photo (Tablet & Desktop) === */}
+          <div className="hidden md:flex flex-col w-full lg:w-5/12 justify-center items-center relative pt-24">
+            {/* Desktop Photo */}
+            <div className="hidden lg:flex justify-center items-center translate-x-6 flex-1 min-h-[480px] xl:min-h-[520px]">
               <TiltedCard
                 imageSrc="/photos/tiltedcard.svg"
                 altText="akmaaltaufiq"
                 captionText="Akmal Taufiqurrahman"
-                containerHeight="600px"
-                containerWidth="500px"
-                imageHeight="600px"
-                imageWidth="500px"
+                containerHeight="480px"
+                containerWidth="400px"
+                imageHeight="480px"
+                imageWidth="400px"
                 rotateAmplitude={10}
                 scaleOnHover={1.1}
                 showMobileWarning={false}
                 showTooltip={false}
-                displayOverlayContent={true}
-                overlayContent={
-                  <p className="bg-transparent px-4 py-2 border-1 border-dashed rounded-lg opacity-50 font-bold m-5 absolute top-5 left-85">
-                    Akmal
-                  </p>
-                }
+                displayOverlayContent={false}
               />
             </div>
 
-            <div className="md:hidden mt-10 mb-20">
+            {/* Tablet Photo */}
+            <div className="md:flex lg:hidden justify-center items-center relative mb-16">
               <TiltedCard
                 imageSrc="/photos/tiltedcard.svg"
                 altText="akmaaltaufiq"
                 captionText="Akmal Taufiqurrahman"
-                containerHeight="400px"
-                containerWidth="300px"
-                imageHeight="400px"
-                imageWidth="300px"
+                containerHeight="360px"
+                containerWidth="280px"
+                imageHeight="360px"
+                imageWidth="280px"
                 rotateAmplitude={10}
                 scaleOnHover={1.1}
                 showMobileWarning={false}
                 showTooltip={false}
-                displayOverlayContent={true}
-                overlayContent={
-                  <p className="bg-transparent px-4 py-2 border-1 border-dashed rounded-lg opacity-50 font-bold m-5 absolute">
-                    Akmal
-                  </p>
-                }
+                displayOverlayContent={false}
               />
             </div>
           </div>
         </div>
+
+        {/* Spacer dari About Me ke Experience */}
+        <div className="h-12 sm:h-16 md:h-20 lg:h-28"></div>
+
         {/* Experience Section */}
-        <div className="flex w-full items-center justify-center p-4 md:mt-25 mt-5">
+        <div
+          id="experience"
+          className="flex w-full items-center justify-center p-4 md:mt-25 mt-5"
+        >
           <BlurText
             text=" My Experience"
             delay={150}
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="md:text-7xl text-3xl font-extrabold"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-center"
           />
         </div>
         <ExperienceTimeline />
+
+        {/* ===== Projects Section ===== */}
         <div className="flex w-full items-center justify-center p-4 md:mt-25 mt-5 font-extrabold">
           <BlurText
             text=" My Projects"
@@ -360,29 +218,228 @@ export default function Home() {
             animateBy="letters"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="md:text-7xl text-3xl font-extrabold"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-center"
           />
         </div>
-        {/* Projects Section Start */}
-        {/* Modified this div to use a grid layout for two columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 w-full max-w-[1400px] mx-auto mt-10">
-          {/* Now mapping over the imported projects array */}
-          {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
-        </div>
-        {/* Projects Section End */}
+
+        <ProjectsSection />
+
+        {/* Spacer dari Projects ke Contact */}
+        <div className="h-12 sm:h-16 md:h-20 lg:h-28"></div>
+
+        {/* Contact Section */}
+        <section
+          id="contact"
+          className="relative flex flex-col items-center justify-center w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24"
+        >
+          {/* Title */}
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <BlurText
+              text="Get In Touch"
+              delay={50}
+              animateBy="letters"
+              direction="top"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold"
+            />
+          </div>
+
+          {/* Two-column grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 w-full max-w-5xl">
+            {/* Left : Contact + Downloads */}
+            <div className="flex flex-col space-y-6 sm:space-y-8 lg:mt-0 overflow-hidden">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+                Contact Information
+              </h2>
+
+              {/* Social list */}
+              <div className="flex flex-col divide-y divide-white/10">
+                {[
+                  {
+                    platform: "Email",
+                    href: "mailto:taufikakmal53@gmail.com",
+                    iconPath: "/icons/gmail.svg",
+                    username: "taufikakmal53@gmail.com",
+                  },
+                  {
+                    platform: "LinkedIn",
+                    href: "https://www.linkedin.com/in/akmal-taufiqurrahman-686961285/",
+                    iconPath: "/icons/linkedin.svg",
+                    username: "Akmal Taufiqurrahman",
+                  },
+                  {
+                    platform: "GitHub",
+                    href: "https://github.com/akmaaltaufiq",
+                    iconPath: "/icons/github.svg",
+                    username: "@akmaaltaufiq",
+                  },
+                  {
+                    platform: "Instagram",
+                    href: "https://www.instagram.com/akmaaltaufiq/",
+                    iconPath: "/icons/instagram.svg",
+                    username: "@akmaaltaufiq",
+                  },
+                  {
+                    platform: "TikTok",
+                    href: "https://www.tiktok.com/@akmaaltaufiq",
+                    iconPath: "/icons/tiktok.svg",
+                    username: "@akmaaltaufiq",
+                  },
+                ].map((link) => (
+                  <a
+                    key={link.platform}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-start gap-3 py-3 text-gray-300 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md"
+                  >
+                    <img
+                      src={link.iconPath}
+                      alt={`${link.platform} icon`}
+                      className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
+                    />
+                    <span className="text-sm sm:text-base lg:text-lg font-medium break-all">
+                      {link.username}
+                    </span>
+                  </a>
+                ))}
+              </div>
+
+              {/* Professional downloads */}
+              <div className="overflow-hidden">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-6">
+                  Professional Information
+                </h3>
+                <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 px-1">
+                  <a
+                    href="/documents/CV_ENG_Updated.pdf"
+                    download
+                    className="inline-flex items-center justify-center text-center px-4 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow hover:shadow-cyan-500/30 hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black min-h-[44px] transform-gpu"
+                  >
+                    Download CV
+                  </a>
+                  <a
+                    href="/documents/Portfolio_ENG_Updated.pdf"
+                    download
+                    className="inline-flex items-center justify-center text-center px-4 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow hover:shadow-pink-500/30 hover:scale-[1.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-black min-h-[44px] transform-gpu"
+                  >
+                    Download Portfolio
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Right : Contact Form */}
+            <div className="overflow-hidden">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-white">
+                Send a Message
+              </h2>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+
+                  const f = new FormData(e.currentTarget);
+                  // Pastikan semua field menjadi string dan tidak null
+                  const name = (f.get("name") || "").toString().trim();
+                  const email = (f.get("email") || "").toString().trim();
+                  const subject = (f.get("subject") || "").toString().trim();
+                  const message = (f.get("message") || "").toString().trim();
+
+                  // Validasi sederhana
+                  if (!subject || !message) {
+                    alert("Subject dan pesan tidak boleh kosong.");
+                    return;
+                  }
+
+                  const mailto =
+                    `mailto:taufikakmal53@gmail.com` +
+                    `?subject=${encodeURIComponent(subject)}` +
+                    `&body=${encodeURIComponent(
+                      `Name: ${name}\nEmail: ${email}\n\n${message}`
+                    )}`;
+
+                  window.location.href = mailto;
+
+                  alert(
+                    "Thanks for reaching out! Your email client will open."
+                  );
+                }}
+                className="flex flex-col space-y-4"
+              >
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-gray-300 text-sm font-medium mb-1"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full px-3 py-2 sm:py-2.5 bg-[#1a1b1c] border border-white/20 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-shadow focus:shadow-md focus:shadow-cyan-500/30 text-sm sm:text-base min-h-[44px]"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-gray-300 text-sm font-medium mb-1"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full px-3 py-2 sm:py-2.5 bg-[#1a1b1c] border border-white/20 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-shadow focus:shadow-md focus:shadow-cyan-500/30 text-sm sm:text-base min-h-[44px]"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="subject"
+                    className="block text-gray-300 text-sm font-medium mb-1"
+                  >
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    className="w-full px-3 py-2 sm:py-2.5 bg-[#1a1b1c] border border-white/20 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-shadow focus:shadow-md focus:shadow-cyan-500/30 text-sm sm:text-base min-h-[44px]"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-gray-300 text-sm font-medium mb-1"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="w-full px-3 py-2 sm:py-2.5 bg-[#1a1b1c] border border-white/20 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-shadow focus:shadow-md focus:shadow-cyan-500/30 text-sm sm:text-base min-h-[100px] resize-y"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full px-4 py-3 sm:py-3.5 bg-cyan-600 text-white font-bold rounded-md hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black transition duration-200 text-sm sm:text-base min-h-[50px]"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
-      {/* Footer Section - Consider moving this to layout.tsx as well for consistency */}
-      <footer className="flex w-full items-center justify-center p-4 border-t border-white/[.15] text-white/50 text-sm font-light mt-20">
-        {" "}
-        {/* Added margin top */}
-        <p>
+      <footer className="w-full overflow-x-hidden flex items-center justify-center p-4 border-t border-white/15 text-white/50 text-xs sm:text-sm font-light mt-16 sm:mt-20">
+        <p className="text-center px-4">
           &copy; {new Date().getFullYear()} akmaaltaufiq. All rights reserved.
-        </p>{" "}
-        {/* Updated name */}
+        </p>
       </footer>
-    </> // Closed React Fragment wrapper
-    // </div> // Removed this closing tag
+    </>
   );
 }

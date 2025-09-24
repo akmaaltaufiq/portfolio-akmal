@@ -7,55 +7,56 @@ import Image from "next/image";
 const experiences = [
   {
     id: 1,
-    title: "Workshop SQL Participant",
-    company: "UPN Veteran Jakarta",
-    year: "2023",
+    title: "Web Developer Intern",
+    company: "Ministry of Trade, Republic of Indonesia",
+    year: "2025",
     description:
-      "Learned how to enhance user experience using motion-based storytelling and copywriting strategies for web interfaces.",
-    logos: ["/exp_logos/logo_upnvj.svg"],
+      "Developing and maintaining internal web applications, gaining hands-on fullstack experience in a government-scale digital environment.",
+    logos: ["/exp_logos/logo_kemendag.svg"],
   },
   {
     id: 2,
-    title: "Sales Assistant & Content Creator",
-    company: "My Sibling and I Bakeshop",
-    year: "2024",
-    description:
-      "Contributed as a part-time production assistant and content creator, increasing product engagement by 30% through promotional TikTok content.",
-    logos: ["/exp_logos/logo_msai.svg"],
-  },
-  {
-    id: 3,
-    title: "Digital Marketing Specialist",
-    company: "PT TYMY Teknologi Indonesia",
-    year: "2024",
-    description: `Worked as a freelance digital marketer promoting insurance and streaming products through social media, consistently meeting daily sales targets.`,
-    logos: ["/exp_logos/logo_tymy.svg"],
-  },
-  {
-    id: 4,
-    title: "Kitchen Steward",
-    company: "Seroeni Restaurant",
-    year: "2025",
-    description:
-      "Worked part-time maintaining kitchen hygiene and assisting chefs to ensure efficient, clean, and safe food service operations.",
-    logos: ["/exp_logos/logo_seroeni.svg"],
-  },
-  {
-    id: 5,
     title: "Content Creator",
     company: "Tiktok & Youtube",
     year: "2025",
-    description: `Created engaging short-form videos and visual content focused on self-development, student life, and tech journeys. Grew an audience of 200+ followers and 80,000+ likes on TikTok, and built a YouTube channel with 1,000+ subscribers.`,
+    description: `Produced IT-focused content on web development and student life, growing a TikTok audience to 1000+ followers and 170,000+ likes on TikTok, and built a YouTube channel with 1,000+ subscribers.`,
     logos: ["/exp_logos/logo_tiktok.svg", "/exp_logos/logo_youtube.svg"],
   },
   {
-    id: 6,
+    id: 3,
     title: "Public Relations Staff FIK Fair",
     company: "BEM FIK UPN Veteran Jakarta",
     year: "2025",
     description:
-      "Responsible for creating communication materials, managing social media engagement, and coordinating with external partners and sponsors.",
+      "Created communication materials, managed event-related social media, and liaised with external partners to support a faculty-level student fair.",
     logos: ["/exp_logos/logo_bemfik.svg"],
+  },
+  {
+    id: 4,
+    title: "Digital Marketing Specialist",
+    company: "PT TYMY Teknologi Indonesia",
+    year: "2024",
+    description:
+      "Achieved 2nd place in the Top Achievers Promotion Partner 2024 program, reflecting strong digital sales strategies and effective communication skills.",
+    logos: ["/exp_logos/logo_tymy.svg"],
+  },
+  {
+    id: 5,
+    title: "Sales Assistant & Content Creator",
+    company: "My Sibling and I Bakeshop",
+    year: "2024",
+    description:
+      "Contributed to daily operations while producing TikTok promotional content that increased product engagement by 30%.",
+    logos: ["/exp_logos/logo_msai.svg"],
+  },
+  {
+    id: 6,
+    title: "Workshop SQL Participant",
+    company: "UPN Veteran Jakarta",
+    year: "2023",
+    description:
+      "Acquired foundational skills in SQL database management and queries for data-driven web applications.",
+    logos: ["/exp_logos/logo_upnvj.svg"],
   },
 ];
 
