@@ -6,7 +6,6 @@ import TiltedCard from "@/blocks/Components/TiltedCard/TiltedCard";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import ProjectsSection from "@/components/ProjectCard";
 import TechStackMarquee from "@/components/TechStackMarquee";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
@@ -132,14 +131,15 @@ export default function Home() {
                 DEVELOPER
               </h3>
               <p className="text-gray-400 text-sm sm:text-base md:text-md mt-2 leading-relaxed text-center lg:text-left">
-                I'm a 5th-semester Informatics student at UPN Veteran Jakarta
-                (GPA 3.90) passionate about fullstack web development. I've
-                built responsive web applications using HTML, CSS, JavaScript,
-                Tailwind CSS, React.js and Next.js, and I'm currently deepening
-                my backend skills with Node.js, Express, and SQL. I also have
-                experience developing Android apps in Java and building
-                Python-based systems. I actively grow through real-world
-                projects, freelance work, and team-based collaboration.
+                I&apos;m a 5th-semester Informatics student at UPN Veteran
+                Jakarta (GPA 3.90) passionate about fullstack web development.
+                I&apos;ve built responsive web applications using HTML, CSS,
+                JavaScript, Tailwind CSS, React.js and Next.js, and I&apos;m
+                currently deepening my backend skills with Node.js, Express, and
+                SQL. I also have experience developing Android apps in Java and
+                building Python-based systems. I actively grow through
+                real-world projects, freelance work, and team-based
+                collaboration.
               </p>
             </div>
 
@@ -292,11 +292,14 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-start gap-3 py-3 text-gray-300 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md"
                   >
-                    <img
+                    <Image
                       src={link.iconPath}
                       alt={`${link.platform} icon`}
+                      width={24}
+                      height={24}
                       className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
                     />
+
                     <span className="text-sm sm:text-base lg:text-lg font-medium break-all">
                       {link.username}
                     </span>

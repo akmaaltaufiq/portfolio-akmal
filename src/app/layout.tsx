@@ -3,7 +3,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import GooeyNav from "@/blocks/Components/GooeyNav/GooeyNav";
-import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { gilroy } from "@/fonts/fonts";
