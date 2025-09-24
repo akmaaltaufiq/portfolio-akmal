@@ -132,14 +132,14 @@ export default function Home() {
               </h3>
               <p className="text-gray-400 text-sm sm:text-base md:text-md mt-2 leading-relaxed text-center lg:text-left">
                 I&apos;m a 5th-semester Informatics student at UPN Veteran
-                Jakarta (GPA 3.90) passionate about fullstack web development.
-                I&apos;ve built responsive web applications using HTML, CSS,
-                JavaScript, Tailwind CSS, React.js and Next.js, and I&apos;m
-                currently deepening my backend skills with Node.js, Express, and
-                SQL. I also have experience developing Android apps in Java and
-                building Python-based systems. I actively grow through
-                real-world projects, freelance work, and team-based
-                collaboration.
+                Jakarta (GPA 3.90) with strong full-stack development skills. On
+                the <strong>front end</strong>, I build responsive, user-focused
+                interfaces using HTML, CSS, JavaScript, TypeScript, Tailwind
+                CSS, Bootstrap, React.js, and Next.js. For the{" "}
+                <strong>back end</strong>, I develop secure, scalable services
+                with PHP, Node.js, Express, and PostgreSQL/SQL, leveraging
+                frameworks like Laravel and CodeIgniter to deliver end-to-end
+                solutions and collaborate effectively on real-world projects.
               </p>
             </div>
 

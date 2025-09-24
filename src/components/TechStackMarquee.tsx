@@ -7,7 +7,6 @@ const techLogos: string[] = [
   "/techstack/php.svg",
   "/techstack/react.svg",
   "/techstack/nextjs.svg",
-  "/techstack/javascript.svg",
   "/techstack/nodejs.svg",
   "/techstack/python.svg",
   "/techstack/tailwind.svg",
@@ -15,6 +14,8 @@ const techLogos: string[] = [
   "/techstack/postgresql-logo.svg",
   "/techstack/html.svg",
   "/techstack/css.svg",
+  "/techstack/javascript.svg",
+  "/techstack/typescript.svg",
 ];
 
 const TechStackMarquee: React.FC = () => {
