@@ -34,7 +34,7 @@ const experiences = [
   {
     id: 4,
     title: "Digital Marketing Specialist",
-    company: "PT TYMY Teknologi Indonesia",
+    company: "TYMY",
     year: "2024",
     description:
       "Achieved 2nd place in the Top Achievers Promotion Partner 2024 program, reflecting strong digital sales strategies and effective communication skills.",
