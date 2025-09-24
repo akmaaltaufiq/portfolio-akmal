@@ -21,7 +21,7 @@ export const projects: Project[] = [
     role: "Web Developer",
     tagline: "Export Readiness Assessment Tool (ERAT)",
     descriptionStory:
-      "Built core features for the Ministry of Trade’s Trade Information System (SIP) during my internship. Developed the Export Readiness Assessment Tool (ERAT) questionnaire and designed the user interface that guides businesses through the export assessment process.",
+      "Built core features for the Ministry of Trade’s Trade Information System (SIP) developed the Export Readiness Assessment Tool (ERAT).",
     techstack: [
       "/techstack/html.svg",
       "/techstack/css.svg",
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     role: "Full-Stack Developer",
     tagline: "Hybrid Encrypted Messaging",
     descriptionStory:
-      "Developed a secure web application allowing users to exchange encrypted messages with confidence. Implemented hybrid encryption using Python and React, integrating a Flask backend and REST API for seamless communication.",
+      "Developed a secure web application implemented hybrid encryption using Python and React, integrating a Flask backend and REST API.",
     techstack: [
       "/techstack/html.svg",
       "/techstack/javascript.svg",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     role: "Full-Stack Developer",
     tagline: "Email Phishing Detection System",
     descriptionStory:
-      "Implemented a full-stack email phishing detection system using Python and Flask. Integrated an intuitive web interface to classify emails, helping users recognize potential cyber threats efficiently.",
+      "Implemented a full-stack email phishing detection system using Python and Flask. Integrated an intuitive web interface to classify emails.",
     techstack: [
       "/techstack/html.svg",
       "/techstack/css.svg",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     tagline: "Brand Website with Bilingual Support",
     descriptionStory:
-      "Built a responsive website for MSAI Bakeshop, offering bilingual support for English and Indonesian. Focused on modern UI, intuitive navigation, and cross-device compatibility to enhance user experience.",
+      "Built a responsive website for MSAI Bakeshop, offering bilingual support for English and Indonesian to enhance user experience.",
     techstack: [
       "/techstack/html.svg",
       "/techstack/css.svg",
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     tagline: "Company Profile Website",
     descriptionStory:
-      "Designed and developed a clean, modern company profile website. Focused on clear presentation of services, visual appeal, and responsive design for desktop and mobile users.",
+      "Designed and developed a clean, modern company profile website. Focused on clear presentation of services and responsive design.",
     techstack: [
       "/techstack/html.svg",
       "/techstack/css.svg",
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     role: "Mobile App Developer",
     tagline: "Expert System for Respiratory Diagnosis",
     descriptionStory:
-      "Created an Android application using Java and Android Studio to assist in diagnosing respiratory diseases. Implemented a user-friendly interface and integrated a knowledge base for accurate symptom analysis.",
+      "Created an Android application to assist in diagnosing respiratory diseases. Integrated a knowledge base for accurate symptom analysis.",
     techstack: ["/techstack/java.svg", "/techstack/android_studio.svg"],
     imageSrc: "/proj/pakarispa.png",
     code: "https://github.com/Zaynorang/SistemPakarISPA.git",
