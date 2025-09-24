@@ -28,7 +28,6 @@ export const projects: Project[] = [
       "/techstack/javascript.svg",
       "/techstack/php.svg",
       "/techstack/codeigniter.svg",
-      "/techstack/bootstrap.svg",
       "/techstack/postgresql-logo.svg",
     ],
     imageSrc: "/proj/SIP.png",
